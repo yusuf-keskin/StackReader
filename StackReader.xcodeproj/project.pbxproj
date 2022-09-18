@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320B334928D632C100BA48D7 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334528D632C100BA48D7 /* URLBuilder.swift */; };
+		320B334A28D632C100BA48D7 /* Local Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334628D632C100BA48D7 /* Local Errors.swift */; };
+		320B334B28D632C100BA48D7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334728D632C100BA48D7 /* Extensions.swift */; };
+		320B334C28D632C100BA48D7 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334828D632C100BA48D7 /* JsonParser.swift */; };
+		320B334E28D632E100BA48D7 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334D28D632E100BA48D7 /* ApiService.swift */; };
 		3285892728D39F6300711F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892628D39F6300711F87 /* AppDelegate.swift */; };
 		3285892928D39F6300711F87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892828D39F6300711F87 /* SceneDelegate.swift */; };
 		3285892B28D39F6300711F87 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892A28D39F6300711F87 /* LaunchVC.swift */; };
@@ -19,9 +24,15 @@
 		3285894728D3A18C00711F87 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285894628D3A18C00711F87 /* MainCoordinator.swift */; };
 		3285894928D3A1BC00711F87 /* Stroyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285894828D3A1BC00711F87 /* Stroyboarded.swift */; };
 		3285894C28D3AB5600711F87 /* QuestionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285894B28D3AB5600711F87 /* QuestionListCell.swift */; };
+		32CF1C4A28D634FA00734089 /* DecodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1C4928D634FA00734089 /* DecodeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320B334528D632C100BA48D7 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		320B334628D632C100BA48D7 /* Local Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local Errors.swift"; sourceTree = "<group>"; };
+		320B334728D632C100BA48D7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		320B334828D632C100BA48D7 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		320B334D28D632E100BA48D7 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		3285892328D39F6300711F87 /* StackReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3285892628D39F6300711F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3285892828D39F6300711F87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +47,7 @@
 		3285894628D3A18C00711F87 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		3285894828D3A1BC00711F87 /* Stroyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroyboarded.swift; sourceTree = "<group>"; };
 		3285894B28D3AB5600711F87 /* QuestionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListCell.swift; sourceTree = "<group>"; };
+		32CF1C4928D634FA00734089 /* DecodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +61,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		320B334F28D632E500BA48D7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				320B334D28D632E100BA48D7 /* ApiService.swift */,
+			);
+			name = Services;
+			path = ../Services;
+			sourceTree = "<group>";
+		};
+		320B335028D632F200BA48D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				320B334628D632C100BA48D7 /* Local Errors.swift */,
+				320B334728D632C100BA48D7 /* Extensions.swift */,
+				320B334828D632C100BA48D7 /* JsonParser.swift */,
+				320B334528D632C100BA48D7 /* URLBuilder.swift */,
+			);
+			name = Helpers;
+			path = ../Services/Helpers;
+			sourceTree = "<group>";
+		};
 		3285891A28D39F6300711F87 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +101,8 @@
 		3285892528D39F6300711F87 /* StackReader */ = {
 			isa = PBXGroup;
 			children = (
+				320B334F28D632E500BA48D7 /* Services */,
+				320B335028D632F200BA48D7 /* Helpers */,
 				3285894328D3A13700711F87 /* Coordinate */,
 				3285894028D3A03D00711F87 /* Model */,
 				3285893F28D3A03200711F87 /* View */,
@@ -104,6 +139,7 @@
 		3285894028D3A03D00711F87 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				32CF1C4928D634FA00734089 /* DecodeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,10 +240,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				320B334E28D632E100BA48D7 /* ApiService.swift in Sources */,
+				320B334928D632C100BA48D7 /* URLBuilder.swift in Sources */,
+				320B334A28D632C100BA48D7 /* Local Errors.swift in Sources */,
+				320B334B28D632C100BA48D7 /* Extensions.swift in Sources */,
+				320B334C28D632C100BA48D7 /* JsonParser.swift in Sources */,
 				3285893C28D3A00700711F87 /* QuestionListVC.swift in Sources */,
 				3285894728D3A18C00711F87 /* MainCoordinator.swift in Sources */,
 				3285892B28D39F6300711F87 /* LaunchVC.swift in Sources */,
 				3285894C28D3AB5600711F87 /* QuestionListCell.swift in Sources */,
+				32CF1C4A28D634FA00734089 /* DecodeModel.swift in Sources */,
 				3285894528D3A14F00711F87 /* Coordinator.swift in Sources */,
 				3285892728D39F6300711F87 /* AppDelegate.swift in Sources */,
 				3285892928D39F6300711F87 /* SceneDelegate.swift in Sources */,
@@ -288,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -342,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

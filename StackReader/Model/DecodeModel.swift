@@ -1,12 +1,12 @@
 //
-//  QuestionModel.swift.swift
+//  DecodeModel.swift.swift
 //  StackReader
 //
 //  Created by YUSUF KESKİN on 17.09.2022.
 //
 
 // MARK: - Welcome
-struct QuestionData: Codable {
+struct DecodeModel: Codable {
     let items: [Item]
 
     enum CodingKeys: String, CodingKey {

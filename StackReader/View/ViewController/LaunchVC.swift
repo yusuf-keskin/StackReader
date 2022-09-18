@@ -18,7 +18,6 @@ class LaunchVC: UIViewController, Storyboarded {
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
         animateAndGo(view: launchTitle, delay: 0)
-
     }
     
     func animateAndGo(view : UIView, delay: TimeInterval) {
@@ -30,6 +29,8 @@ class LaunchVC: UIViewController, Storyboarded {
             self.coordinator?.navitage(coordinatorTo: .questionVC)
         }
     }
+    
+    
 
 }
 

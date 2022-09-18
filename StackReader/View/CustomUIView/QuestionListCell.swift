@@ -24,6 +24,23 @@ class QuestionListCell: UITableViewCell {
         
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLbl.text?.removeAll()
+        viewCountLbl.text?.removeAll()
+        scoreCountLbl.text?.removeAll()
+//        ApiService.instance.dataTask?.cancel()
+//        ApiService.instance.dataTask = nil
+        
+    }
+    
+    
+    func setupView(withQuestion item : Item) {
+        titleLbl.text = String(describing: item.title!)
+        viewCountLbl.text = String(describing: item.viewCount!)
+        scoreCountLbl.text = String(describing: item.score!)
+        
+    }
 
 }
 

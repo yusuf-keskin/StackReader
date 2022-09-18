@@ -8,16 +8,17 @@
 import Foundation
 
 class JsonParser {
-    func decodeApiResponse(withData data : Data) -> [QuestionData] {
+    func decodeApiResponse(withData data : Data) -> DecodeModel {
         
-        let questions = [QuestionData]()
+        var questions : DecodeModel? = nil
         let decoder = JSONDecoder()
         do {
-            let questions = try decoder.decode([QuestionData].self, from: data)
+            let mainData = try decoder.decode(DecodeModel.self, from: data)
+            questions = mainData
         } catch {
-            print(ApiServiceError.parsingError.errorDescription as Any)
+            print(ApiServiceError.parsingError.localDescription as Any, error)
         }
-        return questions
+        return questions!
     }
     
 }

@@ -70,11 +70,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p9J-Uk-ckR">
-                                                    <rect key="frame" x="176.5" y="37" width="225.5" height="15"/>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p9J-Uk-ckR">
+                                                    <rect key="frame" x="189" y="37" width="213" height="15"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7r-cY-UDZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="15"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="38" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="7um-EE-Unb"/>
                                                                 <constraint firstAttribute="height" constant="15" id="ITy-PY-TJL"/>
@@ -84,7 +84,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125451128" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8f-l7-4hx">
-                                                            <rect key="frame" x="47" y="0.0" width="69" height="15"/>
+                                                            <rect key="frame" x="43" y="0.0" width="62" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62" id="MMB-1D-tHF"/>
                                                                 <constraint firstAttribute="height" constant="15" id="bd1-Jv-blM"/>
@@ -94,7 +94,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E21-O3-Bba">
-                                                            <rect key="frame" x="121" y="0.0" width="36" height="15"/>
+                                                            <rect key="frame" x="110" y="0.0" width="36" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="6E9-Co-rKT"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="anm-bA-s8J"/>
@@ -104,7 +104,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12145454" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7B-b3-Dp8">
-                                                            <rect key="frame" x="162" y="0.0" width="63.5" height="15"/>
+                                                            <rect key="frame" x="151" y="0.0" width="62" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62" id="30f-AD-GgS"/>
                                                                 <constraint firstAttribute="height" constant="15" id="xuO-8y-VPo"/>

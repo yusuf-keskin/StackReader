@@ -1,5 +1,5 @@
 //
-//  Error Define.swift
+//  Local Errors.swift
 //  StackReader
 //
 //  Created by YUSUF KESKİN on 17.09.2022.
@@ -14,14 +14,14 @@ enum ApiServiceError: LocalizedError  {
 }
 
 extension ApiServiceError {
-    var localizedDescription: String {
+    var localDescription: String {
         switch self {
         case .urlCreateError:
-          return NSLocalizedString("Url creating failed.", comment: "URL Error")
+          return "Url creating failed."
         case .parsingError:
-          return NSLocalizedString("Json parsing failed", comment: "Parsing Error")
+          return "Json parsing failed"
         case .dataFetchError:
-          return NSLocalizedString("Api response data is nil or invalid", comment: "Fetch Error")
+          return "Api response data is nil or invalid"
         }
     }
 }
