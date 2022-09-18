@@ -8,17 +8,33 @@
 import Foundation
 
 class JsonParser {
-    func decodeApiResponse(withData data : Data) -> DecodeModel {
+    func decodeApiResponse(withData data : Data) -> [CoreModel] {
         
-        var questions : DecodeModel? = nil
+        var questions = [CoreModel] ()
         let decoder = JSONDecoder()
         do {
             let mainData = try decoder.decode(DecodeModel.self, from: data)
-            questions = mainData
+            for question in mainData.items {
+                let model = CoreModel(
+                    title: question.title ?? "No Title",
+                    tags: question.tags,
+                    viewCount: question.viewCount,
+                    score: question.score,
+                    creationDate: question.creationDate,
+                    lastEditDate: question.lastEditDate,
+                    questionID: question.questionID,
+                    link: question.link,
+                    ownerTitle: question.title,
+                    body: question.body,
+                    ownerReputation: question.owner?.reputation,
+                    ownerProfileImage: question.owner?.profileImage,
+                    ownerDisplayName: question.owner?.displayName)
+                questions.append(model)
+            }
         } catch {
             print(ApiServiceError.parsingError.localDescription as Any, error)
         }
-        return questions!
+        return questions
     }
     
 }

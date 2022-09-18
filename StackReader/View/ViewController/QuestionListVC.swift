@@ -13,7 +13,7 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
     @IBOutlet weak var tableView: UITableView!
     var page = "1"
     
-    var items = [Item] ()
+    var items = [CoreModel] ()
     
     weak var coordinator : MainCoordinator?
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ApiService {
+class ApiService : ServiceProtocol {
     static let instance = ApiService(urlBuilder: URLBuilder.init(), jsonParser: JsonParser.init())
     
     var urlBuilder : URLBuilder?
@@ -17,7 +17,7 @@ class ApiService {
     var dataTask : URLSessionDataTask?
     var downloadTask : URLSessionDownloadTask?
     
-    var items: [Item] = []
+    var items: [CoreModel] = []
     
     var isPaginating : Bool = false
     
@@ -26,7 +26,7 @@ class ApiService {
         self.jsonParser = jsonParser
     }
     
-    func fetchData(pagination : Bool = false, forPage page: String, andTag tag : String?, completion : @escaping (_ data :[Item], _ isOffline : Bool) -> () ) {
+    func fetchData(pagination : Bool = false, forPage page: String, andTag tag : String?, completion : @escaping (_ data :[CoreModel], _ isOffline : Bool) -> () ) {
         
         if pagination{
             isPaginating = true
@@ -37,8 +37,8 @@ class ApiService {
         let task = session.dataTask(with: url) { [self] data, _ , error in
             if let data = data {
                 print("hey")
-                let questionData = jsonParser?.decodeApiResponse(withData: data).items
-                add(newItems: questionData ?? [Item]())
+                let questionData = jsonParser?.decodeApiResponse(withData: data)
+                add(newItem: questionData!)
                 completion(questionData!,false)
             } else {
                 print(error as Any)
@@ -59,8 +59,8 @@ class ApiService {
     }
     
 
-    func add(newItems: [Item]) {
-      items.append(contentsOf: newItems)
+    func add(newItem: [CoreModel] ){
+    items.append(contentsOf: newItem)
       saveItemsToCache()
       }
     
@@ -83,7 +83,7 @@ class ApiService {
         }
     }
     
-    func loadItemsFromCache(completion: @escaping(_ questionData: [Item])->()) {
+    func loadItemsFromCache(completion: @escaping(_ questionData: [CoreModel])->()) {
         do {
             guard FileManager.default.fileExists(atPath: itemsCache.path) else {
                 print("No question data file exist yet")
@@ -91,7 +91,7 @@ class ApiService {
             }
 
             let data = try Data(contentsOf: itemsCache)
-            let items = try JSONDecoder().decode([Item].self, from: data)
+            let items = try JSONDecoder().decode([CoreModel].self, from: data)
 
             completion(items)
 
