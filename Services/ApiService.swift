@@ -61,7 +61,7 @@ class ApiService : ServiceProtocol {
 
     func add(newItem: [CoreModel] ){
     items.append(contentsOf: newItem)
-      saveItemsToCache()
+        saveItemsToCache(modelArray : items)
       }
     
   
@@ -73,7 +73,7 @@ class ApiService : ServiceProtocol {
         }
     }
     
-    func saveItemsToCache() {
+    func saveItemsToCache(modelArray :[CoreModel]) {
         let encoder = JSONEncoder()
         do{
             let data = try encoder.encode(items)

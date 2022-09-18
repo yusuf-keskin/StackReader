@@ -6,19 +6,21 @@
 //
 
 import Foundation
+import CoreData
 
 struct CoreModel : CoreModelProtocol , Codable {
+    
     var title: String
 
-    var tags: [String]?
+    var tags: String?
     
     var viewCount: Int?
     
     var score: Int?
     
-    var creationDate: Int?
+    var creationDate: String?
     
-    var lastEditDate: Int?
+    var lastEditDate: String?
     
     var questionID: Int?
     
@@ -30,9 +32,11 @@ struct CoreModel : CoreModelProtocol , Codable {
     
     var ownerReputation: Int?
     
-    var ownerProfileImage: String?
+    var ownerProfileImageLink: String?
     
     var ownerDisplayName: String?
+    
+    var imageData: Data?
     
 
 }

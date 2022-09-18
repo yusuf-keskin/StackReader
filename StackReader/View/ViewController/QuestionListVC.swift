@@ -23,7 +23,7 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
         tableView.delegate = self
         tableView.dataSource = self
         
-        ApiService.instance.fetchData(pagination: false, forPage: page, andTag: "swift") { [self] data, isOffline  in
+        CoreDataService.instance.fetchData(pagination: false, forPage: page, andTag: "swift") { [self] data, isOffline  in
             
             if isOffline, items.isEmpty {
                 items.append(contentsOf: data)
@@ -50,9 +50,13 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
 
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let position = scrollView.contentOffset.y
-//        if position > (tableView.contentSize.height - 100 - scrollView.frame.height) {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+//        if offsetY > contentHeight - height {
 //            print(ApiService.instance.isPaginating)
 //
 //
@@ -69,23 +73,22 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
 //                    print(items.count)
 //                }
 //
-//                ApiService.instance.fetchData(pagination: true, forPage: page, andTag: "swift") { [self] data in
+//            ApiService.instance.fetchData(pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
+//                if isOffline, items.isEmpty {
 //                    items.append(contentsOf: data)
+//                } else if isOffline == false {
+//                    items.append(contentsOf: data)
+//                }
 //                    DispatchQueue.main.async { [self] in
 //                        tableView.reloadData()
 //                    }
 //                }
 //
 //    }
- }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let height = scrollView.frame.size.height
+        
         
         if offsetY > contentHeight - height {
-            print(ApiService.instance.isPaginating)
+            print(CoreDataService.instance.isPaginating)
 
                 
                 if page == "6" {
@@ -101,7 +104,7 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
                     print(items.count)
                 }
                 
-            ApiService.instance.fetchData(pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
+            CoreDataService.instance.fetchData(pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
                 if isOffline, items.isEmpty {
                     items.append(contentsOf: data)
                 } else if isOffline == false {

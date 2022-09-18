@@ -38,6 +38,7 @@ class QuestionListCell: UITableViewCell {
     func setupView(withQuestion item : CoreModel) {
         titleLbl.text = String(describing: item.title)
         viewCountLbl.text = String(describing: item.viewCount!)
+        viewCountLbl.text = String(describing: item.viewCount!)
         scoreCountLbl.text = String(describing: item.score!)
         
     }

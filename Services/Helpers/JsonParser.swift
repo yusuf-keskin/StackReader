@@ -10,6 +10,8 @@ import Foundation
 class JsonParser {
     func decodeApiResponse(withData data : Data) -> [CoreModel] {
         
+        let dateConverter : DateConverter = DateConverter()
+                
         var questions = [CoreModel] ()
         let decoder = JSONDecoder()
         do {
@@ -17,17 +19,17 @@ class JsonParser {
             for question in mainData.items {
                 let model = CoreModel(
                     title: question.title ?? "No Title",
-                    tags: question.tags,
+                    tags: question.tags?.joined(separator: " , "),
                     viewCount: question.viewCount,
                     score: question.score,
-                    creationDate: question.creationDate,
-                    lastEditDate: question.lastEditDate,
+                    creationDate: dateConverter.convertDateToEpoc(fromInt: question.creationDate!),
+                    lastEditDate: dateConverter.convertDateToEpoc(fromInt: question.lastEditDate ?? 00) ,
                     questionID: question.questionID,
                     link: question.link,
                     ownerTitle: question.title,
                     body: question.body,
                     ownerReputation: question.owner?.reputation,
-                    ownerProfileImage: question.owner?.profileImage,
+                    ownerProfileImageLink: question.owner?.profileImage,
                     ownerDisplayName: question.owner?.displayName)
                 questions.append(model)
             }

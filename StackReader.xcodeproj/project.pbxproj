@@ -11,11 +11,16 @@
 		320B334A28D632C100BA48D7 /* Local Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334628D632C100BA48D7 /* Local Errors.swift */; };
 		320B334C28D632C100BA48D7 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334828D632C100BA48D7 /* JsonParser.swift */; };
 		320B334E28D632E100BA48D7 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334D28D632E100BA48D7 /* ApiService.swift */; };
+		3218A06528D78BBF00943B22 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06428D78BBF00943B22 /* DateConverter.swift */; };
+		3218A06728D792AA00943B22 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06628D792AA00943B22 /* ImageDownloader.swift */; };
+		3218A06E28D7B98300943B22 /* QuestionData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06C28D7B98300943B22 /* QuestionData+CoreDataClass.swift */; };
+		3218A06F28D7B98300943B22 /* QuestionData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06D28D7B98300943B22 /* QuestionData+CoreDataProperties.swift */; };
 		326E49D428D710BF0041E08C /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D328D710BF0041E08C /* ServiceProtocol.swift */; };
 		326E49D628D714AC0041E08C /* Core Model Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D528D714AC0041E08C /* Core Model Protocol.swift */; };
 		326E49D828D715E90041E08C /* CoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D728D715E90041E08C /* CoreModel.swift */; };
 		326E49DA28D71E120041E08C /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D928D71E120041E08C /* ParserProtocol.swift */; };
 		326E49DD28D71F860041E08C /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49DC28D71F860041E08C /* CoreDataService.swift */; };
+		326E49E028D7212D0041E08C /* QuestionData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 326E49DE28D7212D0041E08C /* QuestionData.xcdatamodeld */; };
 		3285892728D39F6300711F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892628D39F6300711F87 /* AppDelegate.swift */; };
 		3285892928D39F6300711F87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892828D39F6300711F87 /* SceneDelegate.swift */; };
 		3285892B28D39F6300711F87 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892A28D39F6300711F87 /* LaunchVC.swift */; };
@@ -36,11 +41,16 @@
 		320B334628D632C100BA48D7 /* Local Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local Errors.swift"; sourceTree = "<group>"; };
 		320B334828D632C100BA48D7 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		320B334D28D632E100BA48D7 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		3218A06428D78BBF00943B22 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		3218A06628D792AA00943B22 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		3218A06C28D7B98300943B22 /* QuestionData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionData+CoreDataClass.swift"; path = "StackReader/QuestionData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3218A06D28D7B98300943B22 /* QuestionData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionData+CoreDataProperties.swift"; path = "StackReader/QuestionData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		326E49D328D710BF0041E08C /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		326E49D528D714AC0041E08C /* Core Model Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core Model Protocol.swift"; sourceTree = "<group>"; };
 		326E49D728D715E90041E08C /* CoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModel.swift; sourceTree = "<group>"; };
 		326E49D928D71E120041E08C /* ParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
 		326E49DC28D71F860041E08C /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		326E49DF28D7212D0041E08C /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		3285892328D39F6300711F87 /* StackReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3285892628D39F6300711F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3285892828D39F6300711F87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,10 +82,10 @@
 		320B334F28D632E500BA48D7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				326E49D328D710BF0041E08C /* ServiceProtocol.swift */,
+				3218A07028D7B99500943B22 /* Protocols */,
 				320B334D28D632E100BA48D7 /* ApiService.swift */,
 				326E49DC28D71F860041E08C /* CoreDataService.swift */,
-				320B335028D632F200BA48D7 /* Helpers */,
+				3285894328D3A13700711F87 /* Coordinate */,
 			);
 			name = Services;
 			path = ../Services;
@@ -84,11 +94,38 @@
 		320B335028D632F200BA48D7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				326E49D928D71E120041E08C /* ParserProtocol.swift */,
+				3218A07128D7B9AE00943B22 /* Protocols */,
 				320B334828D632C100BA48D7 /* JsonParser.swift */,
+				3218A06428D78BBF00943B22 /* DateConverter.swift */,
 				320B334528D632C100BA48D7 /* URLBuilder.swift */,
+				3218A06628D792AA00943B22 /* ImageDownloader.swift */,
 			);
-			path = Helpers;
+			name = Helpers;
+			path = ../Services/Helpers;
+			sourceTree = "<group>";
+		};
+		3218A07028D7B99500943B22 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				326E49D328D710BF0041E08C /* ServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3218A07128D7B9AE00943B22 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				326E49D928D71E120041E08C /* ParserProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3218A07228D7B9C800943B22 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				326E49D528D714AC0041E08C /* Core Model Protocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		326E49DB28D71F4E0041E08C /* Utilities */ = {
@@ -102,6 +139,8 @@
 		3285891A28D39F6300711F87 = {
 			isa = PBXGroup;
 			children = (
+				3218A06C28D7B98300943B22 /* QuestionData+CoreDataClass.swift */,
+				3218A06D28D7B98300943B22 /* QuestionData+CoreDataProperties.swift */,
 				3285892528D39F6300711F87 /* StackReader */,
 				3285892428D39F6300711F87 /* Products */,
 			);
@@ -118,8 +157,8 @@
 		3285892528D39F6300711F87 /* StackReader */ = {
 			isa = PBXGroup;
 			children = (
+				320B335028D632F200BA48D7 /* Helpers */,
 				320B334F28D632E500BA48D7 /* Services */,
-				3285894328D3A13700711F87 /* Coordinate */,
 				3285894028D3A03D00711F87 /* Model */,
 				3285893F28D3A03200711F87 /* View */,
 				326E49DB28D71F4E0041E08C /* Utilities */,
@@ -156,9 +195,10 @@
 		3285894028D3A03D00711F87 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3218A07228D7B9C800943B22 /* Protocols */,
 				32CF1C4928D634FA00734089 /* DecodeModel.swift */,
-				326E49D528D714AC0041E08C /* Core Model Protocol.swift */,
 				326E49D728D715E90041E08C /* CoreModel.swift */,
+				326E49DE28D7212D0041E08C /* QuestionData.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,17 +305,22 @@
 				320B334928D632C100BA48D7 /* URLBuilder.swift in Sources */,
 				320B334A28D632C100BA48D7 /* Local Errors.swift in Sources */,
 				320B334C28D632C100BA48D7 /* JsonParser.swift in Sources */,
+				3218A06728D792AA00943B22 /* ImageDownloader.swift in Sources */,
 				326E49D628D714AC0041E08C /* Core Model Protocol.swift in Sources */,
 				3285893C28D3A00700711F87 /* QuestionListVC.swift in Sources */,
 				326E49DA28D71E120041E08C /* ParserProtocol.swift in Sources */,
 				3285894728D3A18C00711F87 /* MainCoordinator.swift in Sources */,
 				3285892B28D39F6300711F87 /* LaunchVC.swift in Sources */,
 				3285894C28D3AB5600711F87 /* QuestionListCell.swift in Sources */,
+				3218A06E28D7B98300943B22 /* QuestionData+CoreDataClass.swift in Sources */,
 				32CF1C4A28D634FA00734089 /* DecodeModel.swift in Sources */,
 				326E49DD28D71F860041E08C /* CoreDataService.swift in Sources */,
+				3218A06528D78BBF00943B22 /* DateConverter.swift in Sources */,
+				326E49E028D7212D0041E08C /* QuestionData.xcdatamodeld in Sources */,
 				3285894528D3A14F00711F87 /* Coordinator.swift in Sources */,
 				3285892728D39F6300711F87 /* AppDelegate.swift in Sources */,
 				3285892928D39F6300711F87 /* SceneDelegate.swift in Sources */,
+				3218A06F28D7B98300943B22 /* QuestionData+CoreDataProperties.swift in Sources */,
 				3285893E28D3A01600711F87 /* DetailsVC.swift in Sources */,
 				3285894928D3A1BC00711F87 /* Stroyboarded.swift in Sources */,
 			);
@@ -495,6 +540,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		326E49DE28D7212D0041E08C /* QuestionData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				326E49DF28D7212D0041E08C /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 326E49DF28D7212D0041E08C /* CoreDataModel.xcdatamodel */;
+			path = QuestionData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3285891B28D39F6300711F87 /* Project object */;
 }

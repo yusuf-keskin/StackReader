@@ -22,7 +22,7 @@ class LaunchVC: UIViewController, Storyboarded {
     
     func animateAndGo(view : UIView, delay: TimeInterval) {
         
-        let animationDuration = 2.80
+        let animationDuration = 1.0
         UIView.animate(withDuration: animationDuration, delay: delay, options: []) {
             view.alpha = 1
         } completion: { success in
