@@ -18,13 +18,12 @@ extension QuestionData {
 
     @NSManaged public var body: String?
     @NSManaged public var creationDate: String?
-    @NSManaged public var imageData: Date?
+    @NSManaged public var imageData: Data?
     @NSManaged public var lastEditDate: String?
     @NSManaged public var link: String?
     @NSManaged public var ownerDisplayName: String?
     @NSManaged public var ownerProfileImageLink: String?
     @NSManaged public var ownerReputation: Int32
-    @NSManaged public var ownerTitle: String?
     @NSManaged public var questionID: Int32
     @NSManaged public var score: Int32
     @NSManaged public var tags: String?

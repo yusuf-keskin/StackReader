@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
 class CoreDataService : ServiceProtocol {
     
@@ -72,14 +72,17 @@ class CoreDataService : ServiceProtocol {
     }
     
     func saveItemsToCache(modelArray : [CoreModel]) {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        //let appDelegate = UIApplication.shared.delegate as? AppDelegate
         guard let context = appDelegate?.persistentContainer.viewContext else{
             print(CoreDataError.noManagedContext.errorDescription as Any)
             return
         }
-        let newQuestion = NSEntityDescription.insertNewObject(forEntityName: "QuestionData", into: context)
+        
+        
+        print(modelArray.count)
         
         for model in modelArray {
+            let newQuestion = NSEntityDescription.insertNewObject(forEntityName: "QuestionData", into: context)
             newQuestion.setValue(model.title, forKey: "title")
             newQuestion.setValue(model.tags, forKey: "tags")
             newQuestion.setValue(model.viewCount, forKey: "viewCount")
@@ -87,7 +90,6 @@ class CoreDataService : ServiceProtocol {
             newQuestion.setValue(model.creationDate, forKey: "creationDate")
             newQuestion.setValue(model.questionID, forKey: "questionID")
             newQuestion.setValue(model.link, forKey: "link")
-            newQuestion.setValue(model.ownerTitle, forKey: "ownerTitle")
             newQuestion.setValue(model.body, forKey: "body")
             newQuestion.setValue(model.ownerReputation, forKey: "ownerReputation")
             newQuestion.setValue(model.ownerProfileImageLink, forKey: "ownerProfileImageLink")
@@ -106,7 +108,8 @@ class CoreDataService : ServiceProtocol {
     }
     
     func cleanCoreDataStorage() {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        //let appDelegate = UIApplication.shared.delegate as? AppDelegate
         guard let context = appDelegate?.persistentContainer.viewContext else{
             print(CoreDataError.noManagedContext.errorDescription as Any)
             return
@@ -123,7 +126,7 @@ class CoreDataService : ServiceProtocol {
     }
     
     func loadItemsFromCache(completion: @escaping ([CoreModel]) -> ()) {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        //let appDelegate = UIApplication.shared.delegate as? AppDelegate
         guard let context = appDelegate?.persistentContainer.viewContext else{
             print(CoreDataError.noManagedContext.errorDescription as Any)
             return
@@ -131,9 +134,23 @@ class CoreDataService : ServiceProtocol {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "QuestionData")
         
         do{
-            let questionsArray = try(context.fetch(fetchRequest) as? [CoreModel] )!
+            let questionsArray = try(context.fetch(fetchRequest) as? [QuestionData] )!
             print("Fetch succcesfull")
-            completion(questionsArray)
+            var dataArray = [CoreModel]()
+            var data : CoreModel?
+
+            for question in questionsArray {
+                //Convert Int32 to Int
+                let viewCount = Int("\(question.viewCount)")
+                let score = Int("\(question.score)")
+                let questionID = Int("\(question.questionID)")
+                let ownerReputation = Int("\(question.ownerReputation)")
+                
+                data = CoreModel(title: question.title!, tags: question.tags, viewCount: viewCount, score: score, creationDate: question.creationDate, lastEditDate: question.lastEditDate, questionID: questionID, link: question.link, body: question.body, ownerReputation: ownerReputation, ownerProfileImageLink: question.ownerProfileImageLink, ownerDisplayName: question.ownerDisplayName, imageData: question.imageData)
+                dataArray.append(data!)
+            }
+            
+            completion(dataArray)
         } catch let error {
             print(CoreDataError.fetchError.localDescription, error)
         }

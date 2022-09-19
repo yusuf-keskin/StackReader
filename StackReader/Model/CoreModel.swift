@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct CoreModel : CoreModelProtocol , Codable {
+struct CoreModel : CoreModelProtocol , Codable, Listable {
     
     var title: String
 
@@ -25,9 +25,7 @@ struct CoreModel : CoreModelProtocol , Codable {
     var questionID: Int?
     
     var link: String?
-    
-    var ownerTitle: String?
-    
+
     var body: String?
     
     var ownerReputation: Int?

@@ -26,7 +26,6 @@ class JsonParser {
                     lastEditDate: dateConverter.convertDateToEpoc(fromInt: question.lastEditDate ?? 00) ,
                     questionID: question.questionID,
                     link: question.link,
-                    ownerTitle: question.title,
                     body: question.body,
                     ownerReputation: question.owner?.reputation,
                     ownerProfileImageLink: question.owner?.profileImage,

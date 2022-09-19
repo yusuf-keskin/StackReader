@@ -10,8 +10,8 @@ import UIKit
 class QuestionListCell: UITableViewCell {
    
     @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var viewCountLbl: UILabel!
-    @IBOutlet weak var scoreCountLbl: UILabel!
+    @IBOutlet weak var tagsLbl: UILabel!
+    @IBOutlet weak var vievCountLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,20 +27,20 @@ class QuestionListCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLbl.text?.removeAll()
-        viewCountLbl.text?.removeAll()
-        scoreCountLbl.text?.removeAll()
+        tagsLbl.text?.removeAll()
+        vievCountLbl.text?.removeAll()
 //        ApiService.instance.dataTask?.cancel()
 //        ApiService.instance.dataTask = nil
         
     }
     
     
-    func setupView(withQuestion item : CoreModel) {
+    func setupView(withQuestion item : Listable) {
         titleLbl.text = String(describing: item.title)
-        viewCountLbl.text = String(describing: item.viewCount!)
-        viewCountLbl.text = String(describing: item.viewCount!)
-        scoreCountLbl.text = String(describing: item.score!)
-        
+        tagsLbl.text = String(describing: item.tags!)
+        //scoreCountLbl.text = String(describing: item.score!)
+        vievCountLbl.text = String(describing: item.viewCount!)
+  
     }
 
 }

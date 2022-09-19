@@ -19,10 +19,8 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
         tableView.delegate = self
         tableView.dataSource = self
-        
         CoreDataService.instance.fetchData(pagination: false, forPage: page, andTag: "swift") { [self] data, isOffline  in
             
             if isOffline, items.isEmpty {
@@ -36,6 +34,10 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
             
 
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,37 +57,6 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
-        
-//        if offsetY > contentHeight - height {
-//            print(ApiService.instance.isPaginating)
-//
-//
-//                if page == "6" {
-//                    return
-//                }
-//
-//                var newPageNumber = Int(page) ?? 1
-//                if newPageNumber < 6 {
-//                    newPageNumber += 1
-//
-//                    page = String(describing: newPageNumber)
-//                    print(page)
-//                    print(items.count)
-//                }
-//
-//            ApiService.instance.fetchData(pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
-//                if isOffline, items.isEmpty {
-//                    items.append(contentsOf: data)
-//                } else if isOffline == false {
-//                    items.append(contentsOf: data)
-//                }
-//                    DispatchQueue.main.async { [self] in
-//                        tableView.reloadData()
-//                    }
-//                }
-//
-//    }
-        
         
         if offsetY > contentHeight - height {
             print(CoreDataService.instance.isPaginating)
@@ -118,7 +89,9 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
     }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.navitage(coordinatorTo: .detailsVC)
+    }
     
     
 }

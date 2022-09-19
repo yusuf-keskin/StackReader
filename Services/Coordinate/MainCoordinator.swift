@@ -44,6 +44,7 @@ class MainCoordinator : Coordinator {
         case .questionVC:
             let vc = QuestionListVC.instantiate()
             vc.coordinator = self
+            navigationController.isNavigationBarHidden = true
             navigationController.pushViewController(vc, animated: false)
         case .detailsVC:
             let vc = DetailsVC.instantiate()

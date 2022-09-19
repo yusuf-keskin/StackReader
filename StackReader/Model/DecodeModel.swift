@@ -26,7 +26,7 @@ struct Item: Codable {
     enum CodingKeys: String, CodingKey {
         case tags, owner
         case viewCount = "view_count"
-        case score
+        case score = "score"
         case questionID = "question_id"
         case creationDate = "creation_date"
         case lastEditDate = "last_edit_date"

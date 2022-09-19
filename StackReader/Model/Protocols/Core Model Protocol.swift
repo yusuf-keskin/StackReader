@@ -16,7 +16,6 @@ protocol CoreModelProtocol : Decodable{
     var lastEditDate : String? { get set }
     var questionID : Int? { get set }
     var link: String? { get set }
-    var ownerTitle: String? { get set }
     var body: String? { get set }
     var ownerReputation: Int? { get set }
     var ownerProfileImageLink: String? { get set }

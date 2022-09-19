@@ -13,7 +13,7 @@ class DetailsVC: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.isNavigationBarHidden = false
     }
     
 
