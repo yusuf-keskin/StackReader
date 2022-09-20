@@ -29,7 +29,9 @@ class JsonParser {
                     body: question.body,
                     ownerReputation: question.owner?.reputation,
                     ownerProfileImageLink: question.owner?.profileImage,
-                    ownerDisplayName: question.owner?.displayName)
+                    ownerDisplayName : question.owner?.displayName,
+                    acceptedAnswer: ("https://stackoverflow.com/a/\(question.acceptedAnswer ?? 0)"))
+
                 questions.append(model)
             }
         } catch {

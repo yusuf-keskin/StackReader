@@ -22,8 +22,10 @@ struct Item: Codable {
     let creationDate, lastEditDate, questionID : Int?
     let link: String?
     let title, body: String?
+    let acceptedAnswer : Int?
 
     enum CodingKeys: String, CodingKey {
+        case acceptedAnswer = "accepted_answer_id"
         case tags, owner
         case viewCount = "view_count"
         case score = "score"

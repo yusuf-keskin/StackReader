@@ -21,4 +21,5 @@ protocol CoreModelProtocol : Decodable{
     var ownerProfileImageLink: String? { get set }
     var ownerDisplayName: String? { get set }
     var imageData: Data? { get set }
+    var acceptedAnswer : String? { get set }
 }

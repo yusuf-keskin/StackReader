@@ -95,8 +95,8 @@ class CoreDataService : ServiceProtocol {
             newQuestion.setValue(model.ownerProfileImageLink, forKey: "ownerProfileImageLink")
             newQuestion.setValue(model.ownerDisplayName, forKey: "ownerDisplayName")
             newQuestion.setValue(model.lastEditDate, forKey: "lastEditDate")
-            let data = imageDownloader?.downloadImageData(withUrl: URL(string: model.ownerProfileImageLink ?? "")!)
-            newQuestion.setValue(data , forKey: "imageData")
+//            let data = imageDownloader?.downloadImageData(withUrl: URL(string: model.ownerProfileImageLink ?? "")!)
+//            newQuestion.setValue(data , forKey: "imageData")
 
             do{
                 try context.save()
@@ -146,7 +146,8 @@ class CoreDataService : ServiceProtocol {
                 let questionID = Int("\(question.questionID)")
                 let ownerReputation = Int("\(question.ownerReputation)")
                 
-                data = CoreModel(title: question.title!, tags: question.tags, viewCount: viewCount, score: score, creationDate: question.creationDate, lastEditDate: question.lastEditDate, questionID: questionID, link: question.link, body: question.body, ownerReputation: ownerReputation, ownerProfileImageLink: question.ownerProfileImageLink, ownerDisplayName: question.ownerDisplayName, imageData: question.imageData)
+                
+                data = CoreModel(title: question.title!, tags: question.tags, viewCount: viewCount, score: score, creationDate: question.creationDate, lastEditDate: question.lastEditDate, questionID: questionID, link: question.link, body: question.body, ownerReputation: ownerReputation, ownerProfileImageLink: question.ownerProfileImageLink, ownerDisplayName: question.ownerDisplayName, acceptedAnswer: question.acceptedAnswer)
                 dataArray.append(data!)
             }
             

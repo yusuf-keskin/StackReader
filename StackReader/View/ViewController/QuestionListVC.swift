@@ -5,14 +5,23 @@
 //  Created by YUSUF KESKİN on 15.09.2022.
 //
 
+
+protocol DataSenderDelegate {
+    func sendData(questionData : CoreModel)
+}
+
 import UIKit
 
 class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
-
+    
+    
+    var detailDataDelegate : DataSenderDelegate?
+    
     
     @IBOutlet weak var tableView: UITableView!
     var page = "1"
     
+
     var items = [CoreModel] ()
     
     weak var coordinator : MainCoordinator?
@@ -90,9 +99,12 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.navitage(coordinatorTo: .detailsVC)
+        let selectedQuestion = items[indexPath.row]
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
+        vc.pageData = selectedQuestion
+        present(vc, animated: true)
+
     }
-    
     
 }
 

@@ -165,45 +165,113 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain.head.profile" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SwM-1t-6on">
-                                <rect key="frame" x="20" y="52" width="60" height="64"/>
+                                <rect key="frame" x="20" y="62" width="60" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="EBG-mA-K9G"/>
                                     <constraint firstAttribute="width" constant="60" id="Owv-AA-DWQ"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="EwE-tN-oVb">
-                                <rect key="frame" x="90" y="54" width="91.5" height="61.5"/>
+                                <rect key="frame" x="90" y="64" width="67.5" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjf-YO-UaF">
-                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taT-Tc-g6g">
-                                        <rect key="frame" x="0.0" y="24.5" width="60" height="16.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Reputation :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taT-Tc-g6g">
+                                        <rect key="frame" x="0.0" y="23" width="66.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuO-Jz-3kC">
-                                        <rect key="frame" x="0.0" y="45" width="60" height="16.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Created :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuO-Jz-3kC">
+                                        <rect key="frame" x="0.0" y="43.5" width="51" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxD-hM-DVk">
+                                <rect key="frame" x="177.5" y="64" width="216.5" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dwddssdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-4X-Jop">
+                                        <rect key="frame" x="10" y="8" width="196.5" height="44"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="0.25022019139978269" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hWr-4X-Jop" firstAttribute="centerY" secondItem="OxD-hM-DVk" secondAttribute="centerY" id="Bf4-5T-Oj1"/>
+                                    <constraint firstItem="hWr-4X-Jop" firstAttribute="leading" secondItem="OxD-hM-DVk" secondAttribute="leading" constant="10" id="Bk0-nz-wbo"/>
+                                    <constraint firstItem="hWr-4X-Jop" firstAttribute="centerX" secondItem="OxD-hM-DVk" secondAttribute="centerX" id="Eya-xT-AyL"/>
+                                    <constraint firstAttribute="trailing" secondItem="hWr-4X-Jop" secondAttribute="trailing" constant="10" id="FH6-A5-Bot"/>
+                                    <constraint firstItem="hWr-4X-Jop" firstAttribute="top" secondItem="OxD-hM-DVk" secondAttribute="top" constant="8" id="ml3-qH-tBz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;What and where are the stack and heap?&quot; &quot;What and where are the stack and heap?&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T90-V5-tmM">
+                                <rect key="frame" x="20" y="154" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXP-9t-nBc">
+                                <rect key="frame" x="20" y="203" width="374" height="603"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaP-WD-MZf">
+                                <rect key="frame" x="20" y="816" width="374" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="link" catalog="system" title="Check accepted answer ">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="openSafari:" destination="Otp-Ho-zJG" eventType="touchUpInside" id="Gwe-b7-W0t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5te-vw-JMO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="DaP-WD-MZf" firstAttribute="top" secondItem="DXP-9t-nBc" secondAttribute="bottom" constant="10" id="0Uf-cu-f2W"/>
                             <constraint firstItem="EwE-tN-oVb" firstAttribute="leading" secondItem="SwM-1t-6on" secondAttribute="trailing" constant="10" id="6ni-Yz-fwq"/>
-                            <constraint firstItem="EwE-tN-oVb" firstAttribute="top" secondItem="5te-vw-JMO" secondAttribute="top" constant="10" id="hip-ow-bcH"/>
-                            <constraint firstItem="SwM-1t-6on" firstAttribute="top" secondItem="5te-vw-JMO" secondAttribute="top" constant="10" id="mDd-Ga-En9"/>
+                            <constraint firstItem="DXP-9t-nBc" firstAttribute="top" secondItem="T90-V5-tmM" secondAttribute="bottom" constant="8" symbolic="YES" id="AZF-fc-zU1"/>
+                            <constraint firstItem="OxD-hM-DVk" firstAttribute="bottom" secondItem="SwM-1t-6on" secondAttribute="bottom" id="GQv-qx-z8L"/>
+                            <constraint firstItem="OxD-hM-DVk" firstAttribute="trailing" secondItem="wiv-Nh-fK8" secondAttribute="trailingMargin" id="HYR-3Q-1GM"/>
+                            <constraint firstItem="OxD-hM-DVk" firstAttribute="top" secondItem="EwE-tN-oVb" secondAttribute="top" id="OKn-cG-BYj"/>
+                            <constraint firstItem="OxD-hM-DVk" firstAttribute="centerY" secondItem="EwE-tN-oVb" secondAttribute="centerY" id="UhW-ak-EUE"/>
+                            <constraint firstItem="5te-vw-JMO" firstAttribute="trailing" secondItem="DXP-9t-nBc" secondAttribute="trailing" constant="20" id="XT5-ML-OTg"/>
+                            <constraint firstItem="T90-V5-tmM" firstAttribute="leading" secondItem="5te-vw-JMO" secondAttribute="leading" constant="20" id="Xhi-Dt-dnM"/>
+                            <constraint firstItem="OxD-hM-DVk" firstAttribute="leading" secondItem="EwE-tN-oVb" secondAttribute="trailing" constant="20" id="YkG-9z-pJE"/>
+                            <constraint firstItem="5te-vw-JMO" firstAttribute="trailing" secondItem="DaP-WD-MZf" secondAttribute="trailing" constant="20" id="aPz-7I-GLm"/>
+                            <constraint firstItem="T90-V5-tmM" firstAttribute="top" secondItem="SwM-1t-6on" secondAttribute="bottom" constant="30" id="cl4-Gc-vha"/>
+                            <constraint firstItem="DXP-9t-nBc" firstAttribute="leading" secondItem="5te-vw-JMO" secondAttribute="leading" constant="20" id="fh2-YI-rT9"/>
+                            <constraint firstItem="5te-vw-JMO" firstAttribute="bottom" secondItem="DaP-WD-MZf" secondAttribute="bottom" constant="10" id="hUO-Y1-FkG"/>
+                            <constraint firstItem="EwE-tN-oVb" firstAttribute="top" secondItem="5te-vw-JMO" secondAttribute="top" constant="20" id="hip-ow-bcH"/>
+                            <constraint firstItem="SwM-1t-6on" firstAttribute="top" secondItem="5te-vw-JMO" secondAttribute="top" constant="20" id="mDd-Ga-En9"/>
+                            <constraint firstItem="5te-vw-JMO" firstAttribute="trailing" secondItem="T90-V5-tmM" secondAttribute="trailing" constant="20" id="owa-2u-1TJ"/>
+                            <constraint firstItem="DaP-WD-MZf" firstAttribute="leading" secondItem="5te-vw-JMO" secondAttribute="leading" constant="20" id="vCF-92-pRS"/>
                             <constraint firstItem="SwM-1t-6on" firstAttribute="leading" secondItem="5te-vw-JMO" secondAttribute="leading" constant="20" id="vu4-3r-PnK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="creationDateLbl" destination="DuO-Jz-3kC" id="IWI-Ol-vta"/>
+                        <outlet property="ownerNameLbl" destination="xjf-YO-UaF" id="9UK-vx-87F"/>
+                        <outlet property="profileImageView" destination="SwM-1t-6on" id="gjq-JU-gp9"/>
+                        <outlet property="reputationCountLbl" destination="taT-Tc-g6g" id="XiC-AW-HSl"/>
+                        <outlet property="tagsLbl" destination="hWr-4X-Jop" id="UfP-Zc-MoI"/>
+                        <outlet property="tagsView" destination="OxD-hM-DVk" id="Di0-La-drQ"/>
+                        <outlet property="titleLbl" destination="T90-V5-tmM" id="Zwz-qc-yLG"/>
+                        <outlet property="webView" destination="DXP-9t-nBc" id="Rrc-sZ-G1S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xL-wx-dPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,12 +280,16 @@
     </scenes>
     <resources>
         <image name="brain.head.profile" catalog="system" width="114" height="128"/>
+        <image name="link" catalog="system" width="128" height="122"/>
         <image name="logo-stackoverflow" width="622" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

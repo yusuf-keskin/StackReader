@@ -18,6 +18,7 @@ class ImageDownloader {
             } else {
                 if (data != nil) {
                     imageData = data
+                    
                 }
             }
         }

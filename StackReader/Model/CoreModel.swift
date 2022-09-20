@@ -36,5 +36,5 @@ struct CoreModel : CoreModelProtocol , Codable, Listable {
     
     var imageData: Data?
     
-
+    var acceptedAnswer : String?
 }

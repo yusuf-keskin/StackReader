@@ -18,7 +18,7 @@ extension QuestionData {
 
     @NSManaged public var body: String?
     @NSManaged public var creationDate: String?
-    @NSManaged public var imageData: Data?
+//    @NSManaged public var imageData: Data?
     @NSManaged public var lastEditDate: String?
     @NSManaged public var link: String?
     @NSManaged public var ownerDisplayName: String?
@@ -29,6 +29,7 @@ extension QuestionData {
     @NSManaged public var tags: String?
     @NSManaged public var title: String?
     @NSManaged public var viewCount: Int32
+    @NSManaged public var acceptedAnswer : String
 
 }
 

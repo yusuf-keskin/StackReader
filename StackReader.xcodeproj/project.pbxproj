@@ -15,6 +15,8 @@
 		3218A06728D792AA00943B22 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06628D792AA00943B22 /* ImageDownloader.swift */; };
 		3218A06E28D7B98300943B22 /* QuestionData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06C28D7B98300943B22 /* QuestionData+CoreDataClass.swift */; };
 		3218A06F28D7B98300943B22 /* QuestionData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06D28D7B98300943B22 /* QuestionData+CoreDataProperties.swift */; };
+		3244CE6A28DA5AED0093A1FB /* WebKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244CE6928DA5AED0093A1FB /* WebKitExt.swift */; };
+		3244CE6C28DA5F980093A1FB /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244CE6B28DA5F980093A1FB /* UIImageViewExt.swift */; };
 		3259EDD128D8FE1B007BE582 /* Listable Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259EDD028D8FE1B007BE582 /* Listable Protocol.swift */; };
 		326E49D428D710BF0041E08C /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D328D710BF0041E08C /* ServiceProtocol.swift */; };
 		326E49D628D714AC0041E08C /* Core Model Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D528D714AC0041E08C /* Core Model Protocol.swift */; };
@@ -46,6 +48,8 @@
 		3218A06628D792AA00943B22 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		3218A06C28D7B98300943B22 /* QuestionData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionData+CoreDataClass.swift"; path = "StackReader/QuestionData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3218A06D28D7B98300943B22 /* QuestionData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionData+CoreDataProperties.swift"; path = "StackReader/QuestionData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3244CE6928DA5AED0093A1FB /* WebKitExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitExt.swift; sourceTree = "<group>"; };
+		3244CE6B28DA5F980093A1FB /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
 		3259EDD028D8FE1B007BE582 /* Listable Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Listable Protocol.swift"; sourceTree = "<group>"; };
 		326E49D328D710BF0041E08C /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		326E49D528D714AC0041E08C /* Core Model Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core Model Protocol.swift"; sourceTree = "<group>"; };
@@ -131,6 +135,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		3244CE6828DA5AD40093A1FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3244CE6928DA5AED0093A1FB /* WebKitExt.swift */,
+				3244CE6B28DA5F980093A1FB /* UIImageViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		326E49DB28D71F4E0041E08C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +178,7 @@
 				3285894028D3A03D00711F87 /* Model */,
 				3285893F28D3A03200711F87 /* View */,
 				326E49DB28D71F4E0041E08C /* Utilities */,
+				3244CE6828DA5AD40093A1FB /* Extensions */,
 				3285894228D3A04E00711F87 /* ViewModel */,
 				3285892628D39F6300711F87 /* AppDelegate.swift */,
 				3285892828D39F6300711F87 /* SceneDelegate.swift */,
@@ -303,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				326E49D428D710BF0041E08C /* ServiceProtocol.swift in Sources */,
+				3244CE6C28DA5F980093A1FB /* UIImageViewExt.swift in Sources */,
 				320B334E28D632E100BA48D7 /* ApiService.swift in Sources */,
 				326E49D828D715E90041E08C /* CoreModel.swift in Sources */,
 				320B334928D632C100BA48D7 /* URLBuilder.swift in Sources */,
@@ -321,6 +336,7 @@
 				326E49DD28D71F860041E08C /* CoreDataService.swift in Sources */,
 				3218A06528D78BBF00943B22 /* DateConverter.swift in Sources */,
 				326E49E028D7212D0041E08C /* QuestionData.xcdatamodeld in Sources */,
+				3244CE6A28DA5AED0093A1FB /* WebKitExt.swift in Sources */,
 				3285894528D3A14F00711F87 /* Coordinator.swift in Sources */,
 				3285892728D39F6300711F87 /* AppDelegate.swift in Sources */,
 				3285892928D39F6300711F87 /* SceneDelegate.swift in Sources */,
