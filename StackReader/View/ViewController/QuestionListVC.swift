@@ -14,41 +14,40 @@ import UIKit
 
 class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
-    
-    var detailDataDelegate : DataSenderDelegate?
-    
-    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    
     var page = "1"
-    
-
     var items = [CoreModel] ()
-    
     weak var coordinator : MainCoordinator?
-
+    var model = QuestionViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        CoreDataService.instance.fetchData(pagination: false, forPage: page, andTag: "swift") { [self] data, isOffline  in
-            
+        activityIndicator.startAnimating()
+        
+        print("Page 1 is loading")
+        model.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
             if isOffline, items.isEmpty {
                 items.append(contentsOf: data)
             } else if isOffline == false {
                 items.append(contentsOf: data)
             }
-                DispatchQueue.main.async { [self] in
-                    tableView.reloadData()
-                }
-            
-
+            DispatchQueue.main.async { [self] in
+                tableView.reloadData()
+                activityIndicator.stopAnimating()
+                activityIndicator.isHidden = true
+                print("Total question object now is: " + String(items.count))
+            }
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -58,7 +57,7 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
         let indexed = items[indexPath.row]
         cell.setupView(withQuestion: indexed)
         return cell
-
+        
     }
     
     
@@ -68,34 +67,33 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
         let height = scrollView.frame.size.height
         
         if offsetY > contentHeight - height {
-            print(CoreDataService.instance.isPaginating)
-
+            if isPaginating {
+                return
+            }
+            if page == "6" {
+                return
+            }
+            var newPageNumber = Int(page) ?? 1
+            if newPageNumber < 6 {
+                newPageNumber += 1
                 
-                if page == "6" {
-                    return
-                }
+                page = String(describing: newPageNumber)
+                print("Page " + page + " is loading")
                 
-                var newPageNumber = Int(page) ?? 1
-                if newPageNumber < 6 {
-                    newPageNumber += 1
-                    
-                    page = String(describing: newPageNumber)
-                    print(page)
-                    print(items.count)
-                }
-                
-            CoreDataService.instance.fetchData(pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
+            }
+            
+            model.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
                 if isOffline, items.isEmpty {
                     items.append(contentsOf: data)
                 } else if isOffline == false {
                     items.append(contentsOf: data)
                 }
-                    DispatchQueue.main.async { [self] in
-                        tableView.reloadData()
-                    }
+                DispatchQueue.main.async { [self] in
+                    tableView.reloadData()
+                    print("Total question object now is: " + String(items.count))
                 }
- 
-    }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -103,8 +101,6 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsVC") as! DetailsVC
         vc.pageData = selectedQuestion
         present(vc, animated: true)
-
     }
-    
 }
 

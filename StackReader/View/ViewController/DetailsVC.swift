@@ -9,8 +9,9 @@ import UIKit
 import WebKit
 
 class DetailsVC: UIViewController, Storyboarded, WKNavigationDelegate {
+    
+    lazy var pageData : CoreModel? = nil
 
-    var pageData : CoreModel?
     
     weak var coordinator : MainCoordinator?
 
@@ -27,8 +28,6 @@ class DetailsVC: UIViewController, Storyboarded, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
-        
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +45,11 @@ class DetailsVC: UIViewController, Storyboarded, WKNavigationDelegate {
         tagsLbl.text = pageData?.tags
         webView.loadHTMLStringWithMagic(content: (pageData?.body)!, baseURL: nil)
         titleLbl.text = pageData?.title
-        profileImageView.setCustomImage(pageData?.ownerProfileImageLink)
+        if ((pageData?.imageData) != nil) {
+            profileImageView.image = UIImage(data: (pageData?.imageData)!)
+        } else {
+            profileImageView.image = UIImage(named: "fire.png")
+        }
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

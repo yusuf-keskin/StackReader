@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+/// Filtering data for tableView cell
 protocol Listable {
     var title : String { get set }
     var tags: String? { get set }

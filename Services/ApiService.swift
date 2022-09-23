@@ -7,64 +7,55 @@
 
 import Foundation
 
-class ApiService : ServiceProtocol {
+final class ApiService : ServiceProtocol {
     static let instance = ApiService(urlBuilder: URLBuilder.init(), jsonParser: JsonParser.init())
     
     var urlBuilder : URLBuilder?
     var jsonParser : JsonParser?
-    
     let session = URLSession.shared
-    var dataTask : URLSessionDataTask?
-    var downloadTask : URLSessionDownloadTask?
-    
     var items: [CoreModel] = []
     
-    var isPaginating : Bool = false
     
     init(urlBuilder: URLBuilder, jsonParser : JsonParser) {
         self.urlBuilder = urlBuilder
         self.jsonParser = jsonParser
     }
     
-    func fetchData(pagination : Bool = false, forPage page: String, andTag tag : String?, completion : @escaping (_ data :[CoreModel], _ isOffline : Bool) -> () ) {
+    func fetchData(pagination : Bool ,forPage page: String, andTag tag : String?, completion : @escaping (_ data :[CoreModel], _ isOffline : Bool) -> () ) {
         
-        if pagination{
+        if pagination {
             isPaginating = true
+            print("************* --- FETCHING DATA --- *************")
         }
         
         guard let url = urlBuilder?.buildUrl(forPage: page, andTag: tag!) else {return}
-       
-        let task = session.dataTask(with: url) { [self] data, _ , error in
+        
+        session.dataTask(with: url) { [self] data, _ , error in
             if let data = data {
                 print("hey")
                 let questionData = jsonParser?.decodeApiResponse(withData: data)
                 add(newItem: questionData!)
                 completion(questionData!,false)
+                isPaginating = false
+                print("************* --- FETCHING DATA ENDED --- *************")
+                
             } else {
                 print(error as Any)
                 loadItemsFromCache { questionData in
                     completion(questionData,true)
-                    if pagination {
-                        self.isPaginating = false
-                    }
+                    isPaginating = false
+                    print("************* --- FETCHING DATA ENDED --- *************")
                 }
             }
-        }
-        
-        
-        task.resume()
-        isPaginating = false
-        self.dataTask = task
-        
+        }.resume()
     }
     
-
-    func add(newItem: [CoreModel] ){
-    items.append(contentsOf: newItem)
-        saveItemsToCache(modelArray : items)
-      }
     
-  
+    func add(newItem: [CoreModel] ){
+        items.append(contentsOf: newItem)
+        saveItemsToCache(modelArray : items)
+    }
+    
     var itemsCache: URL{
         get{
             var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask) [0]
@@ -89,12 +80,12 @@ class ApiService : ServiceProtocol {
                 print("No question data file exist yet")
                 return
             }
-
+            
             let data = try Data(contentsOf: itemsCache)
             let items = try JSONDecoder().decode([CoreModel].self, from: data)
-
+            
             completion(items)
-
+            
         } catch {
             print("Error loading notif data")
         }

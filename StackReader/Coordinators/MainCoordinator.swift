@@ -46,6 +46,6 @@ class MainCoordinator : Coordinator {
             navigationController.pushViewController(vc, animated: false)
         }
     }
-    
+
 }
 

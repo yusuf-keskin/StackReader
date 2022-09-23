@@ -8,20 +8,17 @@
 import UIKit
 
 class QuestionListCell: UITableViewCell {
-   
+    
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var tagsLbl: UILabel!
     @IBOutlet weak var vievCountLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        
     }
     
     override func prepareForReuse() {
@@ -29,18 +26,12 @@ class QuestionListCell: UITableViewCell {
         titleLbl.text?.removeAll()
         tagsLbl.text?.removeAll()
         vievCountLbl.text?.removeAll()
-//        ApiService.instance.dataTask?.cancel()
-//        ApiService.instance.dataTask = nil
-        
     }
-    
-    
+
     func setupView(withQuestion item : Listable) {
         titleLbl.text = String(describing: item.title)
         tagsLbl.text = String(describing: item.tags!)
-        //scoreCountLbl.text = String(describing: item.score!)
         vievCountLbl.text = String(describing: item.viewCount!)
-  
     }
 
 }

@@ -7,23 +7,22 @@
 
 import Foundation
 
-class ImageDownloader {
-    var dataTask : URLSessionDataTask?
-    func downloadImageData(withUrl url : URL) -> Data? {
-        let session = URLSession.shared
-        var imageData : Data?
-        let task = session.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print(error, ImageServiceError.dataError.localDescription )
-            } else {
-                if (data != nil) {
-                    imageData = data
-                    
-                }
-            }
+final class ImageDownloader {
+    
+    func downloadImageData(withUrl url : String?, completion: @escaping(_ data: Data?) -> () ) {
+        
+        guard let url = url else {
+            print("No valid url")
+            return
         }
-        task.resume()
-        return imageData
+        
+        guard let imageUrl = URL(string: url) else {
+            print("String cannot be casted as URL")
+            return
+        }
+        
+        let data = try? Data(contentsOf: imageUrl)
+        completion(data)
     }
 }
 
