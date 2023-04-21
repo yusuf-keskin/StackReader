@@ -7,15 +7,22 @@
 
 import Foundation
 
-final class JsonParser {
+protocol JsonDecoderProtocol {
+    func decodeApiResponse(withData data : Data) -> [CoreModel]
+}
 
-    var downloader = ImageDownloader()
+final class JsonParser : JsonDecoderProtocol {
+
+    let downloader : ImageDownloaderProtocol
+    let dateConverter : DateConverterProtocol
+    
+    init(downloader: ImageDownloaderProtocol, dateConverter: DateConverterProtocol) {
+        self.downloader = downloader
+        self.dateConverter = dateConverter
+    }
 
     func decodeApiResponse(withData data : Data) -> [CoreModel] {
-        
-        let dateConverter : DateConverter = DateConverter()
-
-                
+      
         var questions = [CoreModel] ()
         let decoder = JSONDecoder()
         do {

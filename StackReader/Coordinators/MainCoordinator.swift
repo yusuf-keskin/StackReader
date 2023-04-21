@@ -15,12 +15,16 @@ enum Navigate {
 }
 
 class MainCoordinator : Coordinator {
+    
+    let viewModel : QuestionViewModelProtocol
+    
     var childCoordinators = [Coordinator] ()
     
     var navigationController: UINavigationController
     
-    init(navigationController : UINavigationController) {
+    init(navigationController : UINavigationController, viewModel : QuestionViewModelProtocol) {
         self.navigationController = navigationController
+        self.viewModel = viewModel
     }
     
     func start() {
@@ -38,6 +42,7 @@ class MainCoordinator : Coordinator {
         case .questionVC:
             let vc = QuestionListVC.instantiate()
             vc.coordinator = self
+            vc.model = viewModel
             navigationController.isNavigationBarHidden = true
             navigationController.pushViewController(vc, animated: false)
         case .detailsVC:

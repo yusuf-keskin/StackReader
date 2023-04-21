@@ -29,8 +29,6 @@ class LaunchVC: UIViewController, Storyboarded {
             self.coordinator?.navitage(coordinatorTo: .questionVC)
         }
     }
-    
-    
 
 }
 

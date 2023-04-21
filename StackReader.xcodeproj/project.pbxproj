@@ -11,7 +11,7 @@
 		320B334A28D632C100BA48D7 /* Local Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334628D632C100BA48D7 /* Local Errors.swift */; };
 		320B334C28D632C100BA48D7 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334828D632C100BA48D7 /* JsonParser.swift */; };
 		320B334E28D632E100BA48D7 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B334D28D632E100BA48D7 /* ApiService.swift */; };
-		3212145428DE58B200007C77 /* Check Varilbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212145328DE58B200007C77 /* Check Varilbles.swift */; };
+		3212145428DE58B200007C77 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212145328DE58B200007C77 /* Definitions.swift */; };
 		3217885628DCDDD900013B65 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217885528DCDDD900013B65 /* QuestionViewModel.swift */; };
 		3218A06528D78BBF00943B22 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06428D78BBF00943B22 /* DateConverter.swift */; };
 		3218A06728D792AA00943B22 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218A06628D792AA00943B22 /* ImageDownloader.swift */; };
@@ -46,7 +46,7 @@
 		320B334628D632C100BA48D7 /* Local Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local Errors.swift"; sourceTree = "<group>"; };
 		320B334828D632C100BA48D7 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		320B334D28D632E100BA48D7 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		3212145328DE58B200007C77 /* Check Varilbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Check Varilbles.swift"; sourceTree = "<group>"; };
+		3212145328DE58B200007C77 /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		3217885528DCDDD900013B65 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionViewModel.swift; path = StackReader/Extensions/QuestionViewModel.swift; sourceTree = SOURCE_ROOT; };
 		3218A06428D78BBF00943B22 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		3218A06628D792AA00943B22 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				3218A06428D78BBF00943B22 /* DateConverter.swift */,
 				320B334528D632C100BA48D7 /* URLBuilder.swift */,
 				3218A06628D792AA00943B22 /* ImageDownloader.swift */,
-				3212145328DE58B200007C77 /* Check Varilbles.swift */,
+				3212145328DE58B200007C77 /* Definitions.swift */,
 			);
 			name = Helpers;
 			path = ../Services/Helpers;
@@ -335,7 +335,7 @@
 				320B334E28D632E100BA48D7 /* ApiService.swift in Sources */,
 				326E49D828D715E90041E08C /* CoreModel.swift in Sources */,
 				320B334928D632C100BA48D7 /* URLBuilder.swift in Sources */,
-				3212145428DE58B200007C77 /* Check Varilbles.swift in Sources */,
+				3212145428DE58B200007C77 /* Definitions.swift in Sources */,
 				320B334A28D632C100BA48D7 /* Local Errors.swift in Sources */,
 				320B334C28D632C100BA48D7 /* JsonParser.swift in Sources */,
 				3217885628DCDDD900013B65 /* QuestionViewModel.swift in Sources */,

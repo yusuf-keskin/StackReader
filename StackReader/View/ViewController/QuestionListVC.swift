@@ -20,7 +20,8 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
     var page = "1"
     var items = [CoreModel] ()
     weak var coordinator : MainCoordinator?
-    var model = QuestionViewModel()
+    var model : QuestionViewModelProtocol? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +30,13 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
         activityIndicator.startAnimating()
         
         print("Page 1 is loading")
-        model.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
+        model?.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
             if isOffline, items.isEmpty {
                 items.append(contentsOf: data)
             } else if isOffline == false {
                 items.append(contentsOf: data)
             }
+            
             DispatchQueue.main.async { [self] in
                 tableView.reloadData()
                 activityIndicator.stopAnimating()
@@ -82,7 +84,7 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
                 
             }
             
-            model.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
+            model?.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
                 if isOffline, items.isEmpty {
                     items.append(contentsOf: data)
                 } else if isOffline == false {

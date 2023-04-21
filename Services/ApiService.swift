@@ -8,15 +8,14 @@
 import Foundation
 
 final class ApiService : ServiceProtocol {
-    static let instance = ApiService(urlBuilder: URLBuilder.init(), jsonParser: JsonParser.init())
     
-    var urlBuilder : URLBuilder?
-    var jsonParser : JsonParser?
+    let urlBuilder : URLBuilderProtocol?
+    let jsonParser : JsonDecoderProtocol?
+
     let session = URLSession.shared
     var items: [CoreModel] = []
-    
-    
-    init(urlBuilder: URLBuilder, jsonParser : JsonParser) {
+        
+    init(urlBuilder: URLBuilderProtocol, jsonParser : JsonDecoderProtocol) {
         self.urlBuilder = urlBuilder
         self.jsonParser = jsonParser
     }

@@ -7,9 +7,13 @@
 
 import Foundation
 
-final class ImageDownloader {
+protocol ImageDownloaderProtocol {
+    func downloadImageData(withUrl url : String?, completion: @escaping(_ data: Data?) -> Void )
+}
+
+final class ImageDownloader : ImageDownloaderProtocol {
     
-    func downloadImageData(withUrl url : String?, completion: @escaping(_ data: Data?) -> () ) {
+    func downloadImageData(withUrl url : String?, completion: @escaping(_ data: Data?) -> Void ) {
         
         guard let url = url else {
             print("No valid url")

@@ -9,15 +9,14 @@ import UIKit
 import CoreData
 
 final class CoreDataService : ServiceProtocol {
+
+    let urlBuilder : URLBuilderProtocol?
+    let jsonParser : JsonDecoderProtocol?
     
-    static let instance = CoreDataService (urlBuilder: URLBuilder.init(), jsonParser: JsonParser.init())
-    
-    var urlBuilder : URLBuilder?
-    var jsonParser : JsonParser?
     let session = URLSession.shared
     var items = [CoreModel] ()
     
-    init(urlBuilder: URLBuilder, jsonParser : JsonParser) {
+    init(urlBuilder: URLBuilderProtocol, jsonParser : JsonDecoderProtocol) {
         self.urlBuilder = urlBuilder
         self.jsonParser = jsonParser
     }

@@ -27,7 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //3:
         let navController = UINavigationController()
-        coordinator = MainCoordinator(navigationController: navController)
+        let model = createViewModel()
+        coordinator = MainCoordinator(navigationController: navController, viewModel: model)
         coordinator?.start()
         
         //4:
@@ -37,6 +38,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //5:
         window = AppWindow
 
+    }
+    
+    func createViewModel() -> QuestionViewModel {
+            let urlBuilder : URLBuilderProtocol = URLBuilder()
+            let imageDownloader : ImageDownloaderProtocol = ImageDownloader()
+            let dateConverter : DateConverterProtocol = DateConverter()
+
+            let jsonParser : JsonDecoderProtocol =  JsonParser(downloader: imageDownloader, dateConverter: dateConverter)
+            let coreDataService : ServiceProtocol = CoreDataService(urlBuilder: urlBuilder, jsonParser: jsonParser)
+            let apiService : ServiceProtocol = ApiService(urlBuilder: urlBuilder, jsonParser: jsonParser)
+            let questionViewModel = QuestionViewModel(coreDataService: coreDataService, apiService: apiService)
+            return questionViewModel
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

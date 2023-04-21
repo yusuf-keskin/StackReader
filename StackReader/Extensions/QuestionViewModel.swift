@@ -14,19 +14,33 @@ enum Storage {
     case fileSystem
 }
 
+protocol QuestionViewModelProtocol {
+    func fetchData(storage : Storage, pagination: Bool, forPage page: String, andTag tag: String?, completion: @escaping ([CoreModel], Bool) -> ())
+              
+}
 
-class QuestionViewModel {
+class QuestionViewModel: QuestionViewModelProtocol {
+    
+    let coreDataService : ServiceProtocol
+    let apiService : ServiceProtocol
+
+    init(coreDataService: ServiceProtocol, apiService: ServiceProtocol) {
+        self.coreDataService = coreDataService
+        self.apiService = apiService
+    }
+
+    
     func fetchData(storage : Storage, pagination: Bool, forPage page: String, andTag tag: String?, completion: @escaping ([CoreModel], Bool) -> ()) {
-        
+
         switch storage {
-            
+
         case .coreData:
-            CoreDataService.instance.fetchData(pagination: pagination, forPage: page, andTag: tag) { data, isOffline in
+            coreDataService.fetchData(pagination: pagination, forPage: page, andTag: tag) { data, isOffline in
                 completion(data, isOffline)
             }
             
         case .fileSystem:
-            ApiService.instance.fetchData(pagination: pagination, forPage: page, andTag: tag) { data, isOffline in
+            apiService.fetchData(pagination: pagination, forPage: page, andTag: tag) { data, isOffline in
                 completion(data, isOffline)
             }
             

@@ -7,9 +7,15 @@
 
 import Foundation
 
-class URLBuilder{
-    
-    func buildUrl(forPage page : String? = "1" , andTag tag : String? = "swift") -> URL {
+protocol URLBuilderProtocol {
+    func buildUrl(forPage page : String, andTag tag : String) -> URL?
+}
+
+class URLBuilder: URLBuilderProtocol {
+    func buildUrl(forPage page: String, andTag tag: String) -> URL? {
+
+        guard Int(page) != nil , Int(page)! > 0  else { return nil }
+        
         var url: URL! {
             var components = URLComponents()
             components.scheme = "https"
