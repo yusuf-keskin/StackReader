@@ -20,7 +20,7 @@
 		3244CE6A28DA5AED0093A1FB /* WebKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244CE6928DA5AED0093A1FB /* WebKitExt.swift */; };
 		3244CE6C28DA5F980093A1FB /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244CE6B28DA5F980093A1FB /* UIImageViewExt.swift */; };
 		3259EDD128D8FE1B007BE582 /* Listable Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259EDD028D8FE1B007BE582 /* Listable Protocol.swift */; };
-		326E49D428D710BF0041E08C /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D328D710BF0041E08C /* ServiceProtocol.swift */; };
+		326E49D428D710BF0041E08C /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D328D710BF0041E08C /* DataServiceProtocol.swift */; };
 		326E49D628D714AC0041E08C /* Core Model Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D528D714AC0041E08C /* Core Model Protocol.swift */; };
 		326E49D828D715E90041E08C /* CoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D728D715E90041E08C /* CoreModel.swift */; };
 		326E49DA28D71E120041E08C /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D928D71E120041E08C /* ParserProtocol.swift */; };
@@ -55,7 +55,7 @@
 		3244CE6928DA5AED0093A1FB /* WebKitExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitExt.swift; sourceTree = "<group>"; };
 		3244CE6B28DA5F980093A1FB /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
 		3259EDD028D8FE1B007BE582 /* Listable Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Listable Protocol.swift"; sourceTree = "<group>"; };
-		326E49D328D710BF0041E08C /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		326E49D328D710BF0041E08C /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		326E49D528D714AC0041E08C /* Core Model Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core Model Protocol.swift"; sourceTree = "<group>"; };
 		326E49D728D715E90041E08C /* CoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModel.swift; sourceTree = "<group>"; };
 		326E49D928D71E120041E08C /* ParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		3218A07028D7B99500943B22 /* Service Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				326E49D328D710BF0041E08C /* ServiceProtocol.swift */,
+				326E49D328D710BF0041E08C /* DataServiceProtocol.swift */,
 			);
 			path = "Service Protocols";
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				326E49D428D710BF0041E08C /* ServiceProtocol.swift in Sources */,
+				326E49D428D710BF0041E08C /* DataServiceProtocol.swift in Sources */,
 				3244CE6C28DA5F980093A1FB /* UIImageViewExt.swift in Sources */,
 				320B334E28D632E100BA48D7 /* ApiService.swift in Sources */,
 				326E49D828D715E90041E08C /* CoreModel.swift in Sources */,

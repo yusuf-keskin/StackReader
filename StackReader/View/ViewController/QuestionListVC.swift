@@ -30,13 +30,10 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
         activityIndicator.startAnimating()
         
         print("Page 1 is loading")
-        model?.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
-            if isOffline, items.isEmpty {
-                items.append(contentsOf: data)
-            } else if isOffline == false {
-                items.append(contentsOf: data)
-            }
-            
+        model?.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, _  in
+
+            items.append(contentsOf: data)
+
             DispatchQueue.main.async { [self] in
                 tableView.reloadData()
                 activityIndicator.stopAnimating()
@@ -85,11 +82,8 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
             }
             
             model?.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, isOffline  in
-                if isOffline, items.isEmpty {
-                    items.append(contentsOf: data)
-                } else if isOffline == false {
-                    items.append(contentsOf: data)
-                }
+                items.append(contentsOf: data)
+
                 DispatchQueue.main.async { [self] in
                     tableView.reloadData()
                     print("Total question object now is: " + String(items.count))

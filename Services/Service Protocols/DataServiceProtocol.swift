@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ServiceProtocol {
+protocol DataServiceProtocol {
     var items: [CoreModel] { get set }
     func fetchData(pagination : Bool ,forPage page: String, andTag tag : String?, completion : @escaping (_ data :[CoreModel], _ isOffline : Bool) -> () ) 
     func add(newItem: [CoreModel] )

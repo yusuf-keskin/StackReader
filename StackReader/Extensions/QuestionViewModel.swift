@@ -21,16 +21,18 @@ protocol QuestionViewModelProtocol {
 
 class QuestionViewModel: QuestionViewModelProtocol {
     
-    let coreDataService : ServiceProtocol
-    let apiService : ServiceProtocol
+    let coreDataService : DataServiceProtocol
+    let apiService : DataServiceProtocol
 
-    init(coreDataService: ServiceProtocol, apiService: ServiceProtocol) {
+    init(coreDataService: DataServiceProtocol, apiService: DataServiceProtocol) {
         self.coreDataService = coreDataService
         self.apiService = apiService
     }
 
     
     func fetchData(storage : Storage, pagination: Bool, forPage page: String, andTag tag: String?, completion: @escaping ([CoreModel], Bool) -> ()) {
+        
+        
 
         switch storage {
 

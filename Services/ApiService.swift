@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ApiService : ServiceProtocol {
+final class ApiService : DataServiceProtocol {
     
     let urlBuilder : URLBuilderProtocol?
     let jsonParser : JsonDecoderProtocol?

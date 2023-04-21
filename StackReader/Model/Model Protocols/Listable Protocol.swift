@@ -13,3 +13,5 @@ protocol Listable {
     var tags: String? { get set }
     var viewCount : Int? { get set }
 }
+
+let NETWORK_STATUS_NOTIFICATION = Notification.Name("NETWORK_STATUS_NOTIFICATION")

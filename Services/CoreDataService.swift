@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-final class CoreDataService : ServiceProtocol {
+final class CoreDataService : DataServiceProtocol {
 
     let urlBuilder : URLBuilderProtocol?
     let jsonParser : JsonDecoderProtocol?
