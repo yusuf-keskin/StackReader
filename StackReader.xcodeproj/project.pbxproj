@@ -20,12 +20,14 @@
 		3244CE6A28DA5AED0093A1FB /* WebKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244CE6928DA5AED0093A1FB /* WebKitExt.swift */; };
 		3244CE6C28DA5F980093A1FB /* UIImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244CE6B28DA5F980093A1FB /* UIImageViewExt.swift */; };
 		3259EDD128D8FE1B007BE582 /* Listable Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259EDD028D8FE1B007BE582 /* Listable Protocol.swift */; };
+		3265A1762A1BAD4B004197AE /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 3265A1752A1BAD4B004197AE /* fire.png */; };
 		326E49D428D710BF0041E08C /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D328D710BF0041E08C /* DataServiceProtocol.swift */; };
 		326E49D628D714AC0041E08C /* Core Model Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D528D714AC0041E08C /* Core Model Protocol.swift */; };
 		326E49D828D715E90041E08C /* CoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D728D715E90041E08C /* CoreModel.swift */; };
 		326E49DA28D71E120041E08C /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49D928D71E120041E08C /* ParserProtocol.swift */; };
 		326E49DD28D71F860041E08C /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E49DC28D71F860041E08C /* CoreDataService.swift */; };
 		326E49E028D7212D0041E08C /* QuestionData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 326E49DE28D7212D0041E08C /* QuestionData.xcdatamodeld */; };
+		3277EB152A1BCD99004A0016 /* LaunchVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277EB142A1BCD99004A0016 /* LaunchVCTest.swift */; };
 		3285892728D39F6300711F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892628D39F6300711F87 /* AppDelegate.swift */; };
 		3285892928D39F6300711F87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892828D39F6300711F87 /* SceneDelegate.swift */; };
 		3285892B28D39F6300711F87 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285892A28D39F6300711F87 /* LaunchVC.swift */; };
@@ -73,12 +75,14 @@
 		3244CE6928DA5AED0093A1FB /* WebKitExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitExt.swift; sourceTree = "<group>"; };
 		3244CE6B28DA5F980093A1FB /* UIImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExt.swift; sourceTree = "<group>"; };
 		3259EDD028D8FE1B007BE582 /* Listable Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Listable Protocol.swift"; sourceTree = "<group>"; };
+		3265A1752A1BAD4B004197AE /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		326E49D328D710BF0041E08C /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		326E49D528D714AC0041E08C /* Core Model Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Core Model Protocol.swift"; sourceTree = "<group>"; };
 		326E49D728D715E90041E08C /* CoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModel.swift; sourceTree = "<group>"; };
 		326E49D928D71E120041E08C /* ParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
 		326E49DC28D71F860041E08C /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		326E49DF28D7212D0041E08C /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		3277EB142A1BCD99004A0016 /* LaunchVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVCTest.swift; sourceTree = "<group>"; };
 		3285892328D39F6300711F87 /* StackReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3285892628D39F6300711F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3285892828D39F6300711F87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +138,7 @@
 			path = ../Services;
 			sourceTree = "<group>";
 		};
-		320B335028D632F200BA48D7 /* Helpers */ = {
+		320B335028D632F200BA48D7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				3218A07128D7B9AE00943B22 /* Protocols */,
@@ -144,8 +148,8 @@
 				3218A06628D792AA00943B22 /* ImageDownloader.swift */,
 				3212145328DE58B200007C77 /* Definitions.swift */,
 			);
-			name = Helpers;
-			path = ../Services/Helpers;
+			name = Utilities;
+			path = ../Services/Utilities;
 			sourceTree = "<group>";
 		};
 		3217885728DCE47400013B65 /* CoreData */ = {
@@ -200,6 +204,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		3277EB132A1BCD48004A0016 /* ViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3277EB142A1BCD99004A0016 /* LaunchVCTest.swift */,
+			);
+			path = ViewControllerTests;
+			sourceTree = "<group>";
+		};
 		3285891A28D39F6300711F87 = {
 			isa = PBXGroup;
 			children = (
@@ -221,8 +233,9 @@
 		3285892528D39F6300711F87 /* StackReader */ = {
 			isa = PBXGroup;
 			children = (
+				3265A1752A1BAD4B004197AE /* fire.png */,
 				3217885728DCE47400013B65 /* CoreData */,
-				320B335028D632F200BA48D7 /* Helpers */,
+				320B335028D632F200BA48D7 /* Utilities */,
 				3285894328D3A13700711F87 /* Coordinators */,
 				320B334F28D632E500BA48D7 /* Services */,
 				3285894028D3A03D00711F87 /* Model */,
@@ -295,14 +308,14 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
-		32ED5A592A1B512C009EF5EA /* Tests */ = {
+		32ED5A592A1B512C009EF5EA /* UtilitiesTests */ = {
 			isa = PBXGroup;
 			children = (
 				32ED5A6C2A1B6447009EF5EA /* JsonParserTests.swift */,
 				32ED5A7B2A1B71A5009EF5EA /* DateConverterTests.swift */,
 				32ED5A7D2A1B8275009EF5EA /* UrlBuilderTests.swift */,
 			);
-			path = Tests;
+			path = UtilitiesTests;
 			sourceTree = "<group>";
 		};
 		32ED5A5F2A1B514A009EF5EA /* StackReaderTests */ = {
@@ -311,7 +324,8 @@
 				32ED5A692A1B586A009EF5EA /* ApiResponseStub.json */,
 				32ED5A7F2A1B87E9009EF5EA /* ImageDownloaderDataStub.swift */,
 				32ED5A712A1B67BF009EF5EA /* Mocks */,
-				32ED5A592A1B512C009EF5EA /* Tests */,
+				32ED5A592A1B512C009EF5EA /* UtilitiesTests */,
+				3277EB132A1BCD48004A0016 /* ViewControllerTests */,
 			);
 			path = StackReaderTests;
 			sourceTree = "<group>";
@@ -408,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3285893328D39F6500711F87 /* LaunchScreen.storyboard in Resources */,
+				3265A1762A1BAD4B004197AE /* fire.png in Resources */,
 				3285893028D39F6500711F87 /* Assets.xcassets in Resources */,
 				3285892E28D39F6300711F87 /* Main.storyboard in Resources */,
 			);
@@ -465,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32ED5A782A1B6D72009EF5EA /* DateConverterMock.swift in Sources */,
+				3277EB152A1BCD99004A0016 /* LaunchVCTest.swift in Sources */,
 				32ED5A7E2A1B8275009EF5EA /* UrlBuilderTests.swift in Sources */,
 				32ED5A6D2A1B6447009EF5EA /* JsonParserTests.swift in Sources */,
 				32ED5A752A1B69C7009EF5EA /* ImageDownloaderMock.swift in Sources */,
