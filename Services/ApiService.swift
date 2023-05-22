@@ -38,7 +38,8 @@ final class ApiService : DataServiceProtocol {
                 isPaginating = false
                 print("************* --- FETCHING DATA ENDED --- *************")
                 
-            } else {
+            }
+            else {
                 print(error as Any)
                 loadItemsFromCache { questionData in
                     completion(questionData,true)

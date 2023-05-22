@@ -11,7 +11,7 @@ import Foundation
 
 enum Storage {
     case coreData
-    case fileSystem
+    case apiManager
 }
 
 protocol QuestionViewModelProtocol {
@@ -41,7 +41,7 @@ class QuestionViewModel: QuestionViewModelProtocol {
                 completion(data, isOffline)
             }
             
-        case .fileSystem:
+        case .apiManager:
             apiService.fetchData(pagination: pagination, forPage: page, andTag: tag) { data, isOffline in
                 completion(data, isOffline)
             }

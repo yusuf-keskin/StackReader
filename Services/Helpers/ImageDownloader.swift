@@ -27,6 +27,7 @@ final class ImageDownloader : ImageDownloaderProtocol {
         
         let data = try? Data(contentsOf: imageUrl)
         completion(data)
+        
     }
 }
 

@@ -30,7 +30,7 @@ class QuestionListVC: UIViewController, Storyboarded, UITableViewDelegate, UITab
         activityIndicator.startAnimating()
         
         print("Page 1 is loading")
-        model?.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "swift") { [self] data, _  in
+        model?.fetchData(storage: .coreData, pagination: true, forPage: page, andTag: "ios") { [self] data, _  in
 
             items.append(contentsOf: data)
 
